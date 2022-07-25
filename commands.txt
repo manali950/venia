@@ -1,0 +1,6 @@
+npx create-react-app adobevenia2
+cd adobevenia2
+
+changes in package.json for react 17 version 
+
+npm start
