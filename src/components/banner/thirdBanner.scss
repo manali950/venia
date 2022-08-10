@@ -1,0 +1,265 @@
+@import "./../variables";
+
+.third_banner {
+    // background-color: rgb(225, 193, 193);
+    display: flex;
+
+    .banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 16px 0px;
+    
+    }
+    .card {
+        position: relative;
+        width: 100%;
+        min-height: 203px;
+        height: auto;
+        overflow: hidden;
+        // margin: 2rem;
+        // padding: 2rem;
+        padding: 108px 82px 120px 108px;
+        background: #1B252C;
+        background: linear-gradient(to bottom, #1B252C, #1B252C);
+        .text {
+            font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-48 
+             $unnamed-font-family-source-serif-pro;
+            letter-spacing: $unnamed-character-spacing-0;
+            color: $white;
+            text-align: left;
+            opacity: 1;
+        }
+        .text-info {
+            font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-20
+            $unnamed-font-family-muli;
+            letter-spacing: $unnamed-character-spacing-0;
+            color: $white;
+            text-align: left;
+            opacity: 1;
+            margin-block-end: 2em;
+            
+
+            // font: normal normal 600 20px/25px Muli;
+            // letter-spacing: 0px;
+            // color: #FFFFFF;
+        }
+        .btn {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            
+            outline: 0;
+            display: inline-block;
+            padding: 13px 56px 13px 51px;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0px;
+            
+            font-weight: bold;
+        
+            text-align: left;
+            cursor: pointer;
+
+            border: 2px solid $white;
+            border-radius: 10px;
+            background-color: #1B252C;
+
+            font:$unnamed-font-style-normal normal $unnamed-font-weight-bold $unnamed-font-size-14 
+            $unnamed-font-family-muli;
+            letter-spacing:$unnamed-character-spacing-0;
+            color:$white;
+            text-align: center;
+            // font: normal normal bold 14px/16px Muli;
+            // letter-spacing: 0px;
+            // color: #FFFFFF;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+        
+        
+    }
+    .locpin_line{
+        img{
+            width: 40px;
+            margin: 0px 0px 0px 16px;
+        }
+        .line{
+            border-top: 8px solid #E26A2C;
+            width: 20%;
+            // margin: 56px 0px 0px 0px;
+        
+        }
+    }
+
+    @media screen and (max-width: $Tablet) and (min-width: ($Mobile )) {
+        // 768 - 320
+        .container {
+            max-width: $Tablet;
+            padding: 0px 0px 0px 0px;
+        }
+        .row {
+            margin: 0px 0px;
+        }
+        .phn-container {
+            padding: 0rem 1rem;
+        }
+        .reverse {
+            display: flex;
+            flex-direction: column;
+        }
+        .banner-img {
+            margin: 0px;
+        }
+        .card {
+            padding: 72px 26px 40px 26px;
+            min-height: 159px;
+            margin-top: -30px;
+            text-align: center;
+            .text {
+                font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-36 
+                     $unnamed-font-family-source-serif-pro;
+                text-align: center;
+                // padding: 2rem 0rem 0rem 0rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+            .text-info{
+                text-align: center;
+            }
+            .btn{
+                text-align: center;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop - 174px)) and (min-width: ($Tablet + 1)) {
+        // 1024 - 850 - 768
+        .card {
+            padding: 1rem 2rem 1rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: $Desktop) and (min-width: ($Tablet + 1)) {
+        // 1024 - 768
+        .card {
+            padding: 2rem 2rem 2rem 2rem;
+            .text {
+                // padding: 2rem 0rem 0rem 0rem;
+                font: normal normal 600 36px Source Serif Pro;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+            .text-info{
+                font: normal normal 600 14px Muli;
+            }
+            .btn{
+                font: normal normal bold 8px Muli;
+                padding: 6px 25px 6px 25px;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop-md - 129px)) and (min-width: ($Desktop + 1)) {
+        // 1280 - 1150 - 1025
+        .card {
+            padding: 1rem 2rem 1rem 2rem !important;
+            .text{
+                font: normal normal 600 24px Source Serif Pro;
+            }
+            .text-info{
+                font: normal normal 600 14px Muli;
+            }
+            .btn{
+                font: normal normal bold 8px Muli;
+                padding: 6px 25px 6px 25px;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop-md - 230px)) and (min-width: ($Desktop + 1)) {
+        // 1280 - 1050 - 1025
+        .card {
+            padding: 1rem 2rem 0rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: $Desktop-md) and (min-width: ($Desktop + 1)) {
+        // 1280 - 1025
+        .card {
+            padding: 2rem 2rem 2rem 2rem; 
+            .text {
+                font: normal normal 600 36px Source Serif Pro;
+                // padding: 2rem 0rem 0rem 0rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+            .text-info{
+                font: normal normal 600 16px Muli;
+            }
+            .btn{
+                font: normal normal bold 12px Muli;
+                padding: 6px 25px 6px 25px;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop-lg - 100px)) and (min-width: ($Desktop-md + 1)) {
+        // 1440 - 1340 - 1281
+        .card {
+            padding: 1rem 1rem 1rem 1rem !important;            
+        }
+    }
+    
+    @media screen and (max-width: $Desktop-lg) and (min-width: ($Desktop-md + 1)) {
+        // 1440 - 1281
+        .card {
+            padding: 2rem 2rem 1.5rem 2rem;
+
+            .text {
+                // padding: 3rem 2rem 2rem 2rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+    // @media screen and (max-width: ($Desktop-lg + 96)) and (min-width: ($Desktop-md + 1)) {
+    //     // 1440 + 96 - 1281
+    //     .card {
+    //         padding: 3rem 2rem 1.5rem 2rem !important;
+
+    //         .text {
+    //             // padding: 3rem 2rem 2rem 2rem ;
+    //             margin-block-start: 0em;
+    //             margin-block-end: 0em;
+    //         }
+    //     }
+    // }
+   
+    @media screen and (max-width: ($Desktop-xl - 160px)) and (min-width: ($Desktop-lg + 1)) {
+        //// 1920 -1760   - 1441 
+        .card {
+            padding: 7rem 2rem 1.7rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: ($Desktop-xl - 280px)) and (min-width: ($Desktop-lg + 1)) {
+        //// 1920 -1640   - 1441 
+        .card {
+            padding: 51px 50px 52px 57px !important;
+            
+        }
+    }
+    @media screen and (max-width: ($Desktop-xl - 380px)) and (min-width: ($Desktop-lg + 1)) {
+        //// 1920 -1540   - 1441 
+        .card {
+            padding: 51px 50px 40px 57px !important;
+            
+        }
+    }
+   
+    @media screen and (max-width: $Desktop-xl) and (min-width: ($Desktop-lg + 1)) {
+        // 1920 - 1441
+        .card {
+            padding: 108px 82px 65px 108px;
+            .text {
+                // padding: 3rem 6rem 3rem 6rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+}

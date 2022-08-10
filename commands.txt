@@ -1,6 +1,65 @@
 npx create-react-app adobevenia2
 cd adobevenia2
-
-changes in package.json for react 17 version 
-
+//...changes in package.json for react 17 version 
 npm start
+
+
+npm install sass
+
+
+//for react router dom
+npm i --save react-router-dom@5.2.0
+
+//for unistallingreact router dom
+npm uninstall --save react-router-dom@5.2.0
+
+//for redux and connect react to redux and thunk
+npm i --save redux react-redux redux-thunk
+npm i  redux@4.1.2 react-redux@7.2.6 redux-thunk
+
+//for axios (api call)
+//npm i --save axios
+
+//json server install
+npx json-server --watch db.json --port 8000      (db.json - file name, 8000- port number)
+
+// generating pdf
+npm i jspdf
+
+// country state city API
+//import { Country, State, City }  from 'country-state-city';
+//console.log(Country.getAllCountries())
+//console.log(State.getAllStates())
+//Go to Web Now -- https://codesandbox.io/s/txzui?file=/src/App.js:625-643 --- https://tutorial101.blogspot.com/2021/11/reactjs-dependent-dropdown-country.html
+npm i country-state-city
+or npm i country-state-city@2.2.0  -- i am using
+
+
+
+//....upload on git hub 
+https://github.com/gitname/react-gh-pages
+
+npm install gh-pages --save-dev
+package.json
+//...
+"homepage": "https://manali950.github.io/venia",
+//...
+"scripts": {
+  //...
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+}
+git init
+git remote add origin https://github.com/manali950/venia.git
+else
+git remote set-url origin https://github.com/manali950/venia.git
+
+npm run deploy
+//... to push code also than run this also
+git add .
+git commit -m "Create a React app and publish it to GitHub Pages"
+git push origin master
+
+//...check git hub
+
+

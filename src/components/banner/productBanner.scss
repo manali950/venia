@@ -1,0 +1,163 @@
+@import "./../variables";
+
+.ProductBanner {
+    // background-color: rgb(225, 193, 193);
+    display: flex;
+    .container {
+        width: 100%;
+        padding: 0px 15px 0px 15px;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 16px 0px;
+    
+    }
+    .card {
+        position: relative;
+        width: 100%;
+        min-height: 203px;
+        height: auto;
+        overflow: hidden;
+        // margin: 2rem;
+        // padding: 2rem;
+        padding: 2rem 2rem 1rem 2rem;
+        background: #090506;
+        background: linear-gradient(to bottom, #090506, #070709);
+        .text {
+            font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-48 
+                $unnamed-font-family-source-serif-pro;
+            letter-spacing: $unnamed-character-spacing-0;
+            color: $white;
+            text-align: center;
+            opacity: 1;
+        }
+        .line {
+            border-top: 8px solid $primary-d1;
+            width: 20%;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: $Tablet) and (min-width: ($Mobile )) {
+        .container {
+            max-width: $Tablet;
+            padding: 0px 0px 0px 0px;
+        }
+        .row {
+            margin: 0px 0px;
+        }
+        .phn-container {
+            padding: 0rem 1rem;
+        }
+        .banner-img {
+            margin: 0px;
+        }
+        .card {
+            padding: 0rem 0rem 0rem 0rem;
+            min-height: 159px;
+            margin-top: -30px;
+            .text {
+                font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-36
+                     $unnamed-font-family-source-serif-pro;
+                padding: 2rem 0rem 0rem 0rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop - 174px)) and (min-width: ($Tablet + 1)) {
+        // 1024 - 850 - 768
+        .card {
+            padding: 1rem 2rem 1rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: $Desktop) and (min-width: ($Tablet + 1)) {
+        // 1024 - 768
+        .card {
+            padding: 2rem 2rem 2rem 2rem;
+            .text {
+                padding: 2rem 0rem 0rem 0rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop-md - 130px)) and (min-width: ($Desktop + 1)) {
+        // 1280 - 1150 - 1025
+        .card {
+            padding: 3rem 2rem 3rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: ($Desktop-md - 230px)) and (min-width: ($Desktop + 1)) {
+        // 1280 - 1050 - 1025
+        .card {
+            padding: 1rem 2rem 0rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: $Desktop-md) and (min-width: ($Desktop + 1)) {
+        // 1280 - 1025
+        .card {
+            padding: 4rem 2rem 4rem 2rem;
+            .text {
+                padding: 2rem 0rem 0rem 0rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+    
+    @media screen and (max-width: $Desktop-lg) and (min-width: ($Desktop-md + 1)) {
+        // 1440 - 1281
+        .card {
+            padding: 3rem 2rem 3.5rem 2rem;
+
+            .text {
+                padding: 3rem 2rem 2rem 2rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+    @media screen and (max-width: ($Desktop-lg + 96)) and (min-width: ($Desktop-md + 1)) {
+        // 1440 + 96 - 1281
+        .card {
+            padding: 5rem 2rem 5.5rem 2rem !important;
+
+            .text {
+                padding: 3rem 2rem 2rem 2rem ;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+   
+    @media screen and (max-width: ($Desktop-xl - 160px)) and (min-width: ($Desktop-lg + 1)) {
+        //// 1920 -1760   - 1441 
+        .card {
+            padding: 7rem 2rem 6.7rem 2rem !important;
+        }
+    }
+    @media screen and (max-width: ($Desktop-xl - 380px)) and (min-width: ($Desktop-lg + 1)) {
+        //// 1920 -1540   - 1441 
+        .card {
+            padding: 7rem 2rem 5.5rem 2rem !important;
+            .text {
+                padding: 1rem 6rem 1rem 6rem !important;
+            }
+        }
+    }
+    @media screen and (max-width: $Desktop-xl) and (min-width: ($Desktop-lg + 1)) {
+        // 1920 - 1441
+        .card {
+            padding: 9rem 5rem 7.7rem 5rem;
+            .text {
+                padding: 3rem 6rem 3rem 6rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+            }
+        }
+    }
+}

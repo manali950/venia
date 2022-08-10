@@ -1,0 +1,128 @@
+@import "./aem-grid-12.css";
+@import "./variables";
+
+*{
+    font-family: muli,sans-serif;
+}
+html,
+body {
+    // margin: 0;
+    // height: 100%;
+    // /* background-color: #E2E6E9; */
+    font-family: muli,sans-serif;
+    margin: 0px;
+    
+}
+.d-flex{
+    display: flex;
+}
+    .container {
+        width: 100%;
+        padding: 0px 150px 0px 150px;
+    }
+    .row {
+        margin: 16px 0;
+    }
+    .col{
+        min-height: 32px;
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .float-right{
+        float: right;
+    }
+    .mr{
+        margin: 0px;
+    }
+    .mr-tp-32{
+        margin-top: 32px;
+    }
+    .mr-bt-16{
+        margin-bottom: 16px;
+    }
+    
+    .mr-bt-32{
+        margin-bottom: 32px;
+    }
+    .mr-rt-7 {
+        margin-right: 7px;
+    }
+    .mr-rt-32 {
+        margin-right: $unnamed-line-spacing-32;
+    }
+    .justify-content-center{
+        justify-content: center;
+    }
+    .padding-lt-rt-10{
+        padding: 0px 10px;
+    }
+    .padding-tp-bt-10{
+        padding: 10px 0px;
+    }
+    .padding-lt-rt-32{
+        padding: 0px 32px 0px 0px;
+    }
+    @include mobile{
+        .container {
+            max-width: $Tablet;
+            padding: 0px 15px 0px 15px;
+        }
+        .custom--phone--hide {
+            display: none !important;
+        }
+        .mr-rt-32 {
+            margin-right: $unnamed-line-spacing-17-5 !important;
+        }
+       
+        .mr-lt-10 {
+            margin-left: 10px !important;
+        }
+    
+        .reverse{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .text-center {
+            text-align: center !important;
+        }
+    }
+    @include Desktop {
+        .container {
+            max-width: $Desktop;
+            padding: 0px 15px 0px 15px !important;
+        }
+        .custom--desktop--hide {
+            display: none !important;
+        }
+    }
+    @include Desktop-md {
+        .container {
+            max-width: $Desktop-md;
+        }
+        .custom--desktop--hide {
+            display: none !important;
+        }
+    }
+    @include Desktop-lg {
+        .container {
+            max-width: $Desktop-lg;
+        }
+        .custom--desktop--hide {
+            display: none !important;
+        }
+    }
+    @include Desktop-xl {
+        .container {
+            max-width: $Desktop-xl;
+        }
+        .custom--desktop--hide {
+            display: none !important;
+        }
+    }
+
+    
+    

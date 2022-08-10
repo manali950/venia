@@ -1,0 +1,214 @@
+@import "./../variables";
+
+.banner {
+    background: #e5e5e7;
+    display: flex;
+    .banner__container{
+        max-width: 1536px;
+        padding: 0px 60px;
+        .banner__content{
+            padding: 161px 197px 50px 91px;
+            margin: 0 auto;
+            .banner__text{
+                display: contents;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                .banner__title{
+                    font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-48 $unnamed-font-family-source-serif-pro;
+                    letter-spacing: $unnamed-character-spacing-0;
+                    color: $unnamed-color-172026;
+                    text-align: left;
+                    // font: normal normal 600 48px/60px Source Serif Pro;
+                    // letter-spacing: 0px;
+                    // color: #172026;
+                    opacity: 1;
+                   
+                    margin-block-start: 0rem;
+                    margin-block-end: 0rem;
+                }
+                .banner__info{
+                    font: $unnamed-font-style-normal normal $unnamed-font-weight-normal $unnamed-font-size-16 $unnamed-font-family-muli;
+                    letter-spacing: $unnamed-character-spacing-0;
+                    color: $unnamed-color-172026;
+                    text-align: left;
+                    // font: normal normal normal 16px/24px Muli;
+                    // letter-spacing: 0px;
+                    // color: #172026;
+                    opacity: 1;
+                    margin-block-start: 0.5rem;
+                    margin-block-end: 1.5rem;
+                }
+                .banner__btn{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    border: 1px solid #E26A2C;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 13px 56px 13px 51px;
+                    font-size: 14px;
+                    line-height: 17px;
+                    letter-spacing: 0px;
+                    color: $white;
+                    font-weight: bold;
+                    background-color: #E26A2C;
+                    text-align: left;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .banner__wrapper{
+        width: -webkit-fill-available;
+        height: 650px;
+        overflow: hidden;
+        img{
+            float: left;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include mobile{}
+    @include Desktop {
+        //  1024 - 768
+        .banner__container{
+            .banner__content {
+                padding: 161px 0px 50px 0px;
+            }
+        }
+    }
+    @include Desktop-md {
+        // 1280 - 1024
+        .banner__container{
+            .banner__content {
+                padding: 161px 20px 50px 20px;
+            }
+        }
+    }
+    @include Desktop-lg {
+        // 1440 - 1280
+        .banner__container{
+            .banner__content {
+                padding: 161px 40px 50px 40px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: ($Desktop-xl - 384px)) and (min-width: 1441px){
+        // 1920 - 1540 - 1441
+         .banner__container .banner__content .banner__text .banner__title {
+            padding: 0px 0px 0px 0px !important;
+        }
+    }
+    @include Desktop-xl{
+        .banner__container {
+            .banner__content{
+                .banner__text{
+                    .banner__title{
+                        padding: 0px 80px 0px 0px;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+
+.phone_banner {
+    display: grid;
+    height: calc(250px + 25vmin);
+  
+    // background-color: lightblue;
+  
+    > * {
+      grid-area: 1/-1;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+    }
+  
+    &:after {
+      content: "";
+      background-color: #000;
+      opacity: 0.5;
+      grid-area: 1/-1;
+    }
+  }
+  
+  .phone_banner__content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgb(72 67 65 / 0%), rgb(255 255 255 / 55%));
+    margin-top: 50px;
+  
+    h2 {
+        font: $unnamed-font-style-normal normal $unnamed-font-weight-600 
+        $unnamed-font-size-36 $unnamed-font-family-source-serif-pro;
+        letter-spacing: $unnamed-character-spacing-0;
+        text-align: center;
+        // font: normal normal 600 36px/45px Source Serif Pro;
+        // letter-spacing: 0px;
+         color: #1B252C;
+        opacity: 1;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    p{
+        font: $unnamed-font-style-normal normal $unnamed-font-weight-normal 
+        $unnamed-font-size-16 $unnamed-font-family-muli;
+        text-align: center;
+        letter-spacing: 0.32px;
+        // font: normal normal normal 16px/24px Muli;
+        color: #1B252C;
+        opacity: 1;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+    }
+    .banner__btn{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        border: 1px solid #E26A2C;
+        outline: 0;
+        display: inline-block;
+        padding: 13px 56px 13px 51px;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0px;
+        color: $white;
+        font-weight: bold;
+        background-color: #E26A2C;
+        text-align: left;
+        cursor: pointer;
+    }
+    .dot-container {
+        display: flex;
+        justify-content: center;
+        margin: 5px auto;
+        .dot {
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            display: inline-block;
+            height: 10px;
+            margin: 0 2px;
+            transition: background-color .6s ease;
+            width: 10px;
+        }
+        .dot-container .active, .dot:hover {
+            background-color: #717171;
+        }
+    }
+  }
+  

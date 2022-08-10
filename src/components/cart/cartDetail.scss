@@ -1,0 +1,331 @@
+@import "./../variables";
+.cartDetail{
+    // background-color: rgb(225, 193, 193);
+    display: flex;
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .line {
+      border-top: 8px solid $primary-d1;
+      width: 20%;
+      margin: auto;
+    }
+    .cart-item-name{
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: -3px;
+      flex: 1 1 auto;
+      padding: 0rem 1rem;
+    }
+    .cart-title{
+      font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-48
+      Source Serif Pro;
+      letter-spacing: $unnamed-character-spacing-0 ;
+      color: $unnamed-color-172026;
+      text-align: center;
+      // font: normal normal 600 48px/45px Source Serif Pro;
+      // letter-spacing: 0px;
+      // color: #172026;
+      opacity: 1;
+      margin-block-start: 0em;
+      margin-block-end: 0.3em;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        // background-color: red;
+        // background-clip: border-box;
+        // border: 1px solid rgba(0, 0, 0, 0.125);
+        // border-radius: 0.25rem;
+        width: 100%;
+        margin: 10px 0px;
+        margin-left: auto;
+        
+        .img-wrapper {
+            display: flex;
+            margin: auto;
+            max-width: 100%;
+            width: 166px;
+            height: 199px;
+            transform: scale(1);
+            vertical-align: middle;
+            border-top-left-radius: calc(0.25rem - 1px);
+            border-top-right-radius: calc(0.25rem - 1px);
+        }
+        
+        .card-body{
+            flex: 1 1 auto;
+            padding: 0rem 1rem;
+            .icon{
+              margin: 0px 10px;
+            }
+            .checkoutTilte{
+              font: $unnamed-font-style-normal normal $unnamed-font-weight-600 $unnamed-font-size-20 $unnamed-font-family-muli;
+              letter-spacing: $unnamed-character-spacing-0;
+              color: $unnamed-color-172026;
+              text-align: left;
+              font: normal normal 600 20px/25px muli, sans-serif;
+              // letter-spacing: 0px;
+              // color: #172026;
+            }
+            
+            table {
+              border-collapse: collapse;
+              width: 100%;
+              td, th {
+                // border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px ;
+              }
+              td:nth-of-type(2n) {
+                text-align: right;
+              }
+              th:nth-of-type(2n) {
+                text-align: right;
+              }
+              
+            }
+            .btn {
+              border: 2px solid $white;
+              border-radius: 4px;
+              padding: 19px 25px;
+              text-align: center;
+              display: inline-block;
+              margin: 4px 2px;
+          }
+          .addtocart{
+              margin: 10px 0px;
+              display: flex;
+          }
+          
+         
+          .addtocartBtn{
+              width: 62% !important;
+              height: 33px;
+              color: $white;
+              margin: auto;
+              padding: 0.375rem 0.75rem;
+              order: 2px solid $white !important ;
+              // border-radius: 31px !important;
+              background: $primary-brand 0% 0% no-repeat padding-box !important;
+              text-decoration: none;
+              a{
+                text-decoration: none;
+                color: $white;
+              }
+             
+          }
+          .ppBtn{
+            width: 60% !important;
+            margin: auto;
+            padding: 0.375rem 0.75rem; 
+          }
+          .padding-title{
+            padding: 1rem 1rem 0rem 1rem;
+           
+          }
+          p{
+           
+            margin-block-start: 0.5em;
+            margin-block-end: 1em;
+            
+          }
+
+          
+
+            
+        }
+        .padding-quantity-btn{
+          padding: 0rem 0.1rem;
+        }
+        .quantity {
+            margin: 30px 0px;
+          
+           input {
+            -webkit-appearance: none;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #B5B7BC;
+            border-radius: 8px;
+            text-align: center;
+            width: 40%;
+            height: 30px;
+            margin: 0px 5px;
+            background-color: white;
+            font-size: 16px;
+            color: #43484D;
+            font-weight: 300;
+          }
+           
+          button[class*=btn] {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #B5B7BC;
+            background-color: white;
+            border-radius: 20px;
+            // border: none;
+            cursor: pointer;
+          }
+          
+          .minus-btn img {
+            // margin-bottom: 3px;
+            width: 20px;
+          }
+          .plus-btn img {
+            margin-top: 2px;
+            width: 20px;
+          }
+          button:focus,
+          input:focus {
+            outline:0;
+          }
+          
+        }
+        .remove-btn{
+          border: none;
+          background: white;
+          font-size: 16px;
+          padding: 0px;
+        }
+        
+    }
+    .border{
+      background-clip: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem;
+    }
+    .filter-wrapper {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        // padding: 10px 0;
+        span{
+          font: normal normal 600 12px/14px muli, sans-serif;;
+          letter-spacing: 0px;
+          color: #172026;
+          // margin-block-start: 0.5em;
+          // margin-block-end: 1em;
+        }
+    }
+    
+
+@media screen and (max-width: $Tablet) and (min-width: $Mobile) {
+  .container {
+      max-width: $Tablet;
+      padding: 0px 15px 0px 15px;
+  }
+  .cart-title{
+    font: $unnamed-font-style-normal normal 
+    $unnamed-font-weight-600 $unnamed-font-size-36
+     $unnamed-font-family-source-serif-pro;
+
+  }
+  .card{
+    margin: 6px 0px;
+  }
+  .card .padding-title{
+    padding: 1rem 1rem 0rem 1rem;
+  }
+  .card .padding-quantity{
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  
+  .card .quantity {
+     margin: 0px 0px; 
+  }
+   .border {
+    border: 0px solid rgba(0, 0, 0, 0.125);
+  }
+  .checkoutBody {
+     padding: 0rem 0rem !important; 
+  }
+  
+}
+@media screen and (max-width: $Tablet)  and (min-width: 550px) {
+   .card .card-body .addtocartBtn {
+      height: 54px !important;
+   }
+}
+@media screen and (max-width: $Desktop) and (min-width: ($Tablet + 1)) {
+  .container {
+      max-width: $Desktop;
+      padding: 0px 15px 0px 15px !important;
+  }
+  
+}
+@media screen and (max-width: $Desktop-md) and (min-width: ($Desktop + 1)) {
+  .container {
+      max-width: $Desktop-md;
+  }
+  .card .card-body .checkoutTilte {
+    margin-left: 8px;
+    margin-block-end: 1em;
+  }
+ 
+}
+@media screen and (max-width: $Desktop-lg) and (min-width: ($Desktop-md + 1)) {
+  .container {
+      max-width: $Desktop-lg;
+  }
+}
+@media screen and (max-width: $Desktop-xl) and (min-width: ($Desktop-lg + 1)) {
+  .container {
+      max-width: $Desktop-xl;
+  }
+  .addtocartBtn{
+    height: 47px !important;
+  }
+   .card .quantity input {
+    width: 30%;
+   }
+   .align{
+    margin-inline-start: 32px;
+    margin-inline-end: 0px;
+    margin-block-start: 2em !important;
+    margin-block-end: 1.3em !important;
+  }
+   .card .card-body table td,  .card .card-body table th {
+    text-align: left;
+    padding: 8px 32px;
+  }
+
+  
+}
+
+
+}
+
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid #D1D3D6;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  span{ 
+    font-size: 14px;
+    margin: 0px 10px 0px 0px;
+  }
+  .active, .collapsible:hover {
+    background-color: white;
+    border: 1px solid #D1D3D6;
+    color: black;
+  }
+}
+
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}

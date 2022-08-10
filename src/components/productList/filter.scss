@@ -1,0 +1,79 @@
+@import "./../variables";
+.filter-19{
+    width: calc(25% - 6%);
+
+.filter {
+    .tiltle {
+        font: $unnamed-font-style-normal normal $unnamed-font-weight-normal $unnamed-font-size-20 
+             $unnamed-font-family-muli;
+        letter-spacing: $unnamed-character-spacing-0;
+        color: $gray-d2;
+        text-align: left;
+        font: normal normal normal 20px/14px Muli;
+        opacity: 1;
+    }.tiltle2{
+        text-align: left;
+        font: normal normal 600 16px/24px Muli;
+        letter-spacing: 0px;
+        color: #181C24;
+        opacity: 1;
+    }
+
+    .divider {
+        border-top: 1px solid #e4e0e0;
+    }
+    .btn {
+        border: 2px solid $white;
+        border-radius: 4px;
+        padding: 19px 25px;
+        text-align: center;
+        display: inline-block;
+        margin: 4px 2px;
+    }
+    .btn-black {
+        background: $unnamed-color-172026 0% 0% no-repeat padding-box;
+    }
+    .btn-white {
+        background: $white 0% 0% no-repeat padding-box;
+        border: 2px solid #DFE1E2;
+    }
+    .btn-darkGreen {
+        background: $positive-1 0% 0% no-repeat padding-box;
+    }
+    .btn-yellow {
+        background: #fdba5e 0% 0% no-repeat padding-box;
+    }
+    .btn-blue {
+        border: 2px solid $white;
+        background: $primary-m1 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+    }
+    .btn-red {
+        background: #e34850 0% 0% no-repeat padding-box;
+    }
+    .btn-darkBlue {
+        background: $primary-d1 0% 0% no-repeat padding-box;
+    }
+    .btn-pink {
+        background: #f9009a 0% 0% no-repeat padding-box;
+    }
+    .btn-orange {
+        background: #eb7327 0% 0% no-repeat padding-box;
+    }
+    .btn-rainbow {
+        background: transparent
+            linear-gradient(
+                180deg,
+                #af52ff 0%,
+                #7950e8 16%,
+                #4f5ada 29%,
+                #57cb76 43%,
+                #ebc250 56%,
+                #ff8810 69%,
+                #e32f0f 83%,
+                #bf1919 100%
+            )
+            0% 0% no-repeat padding-box;
+    }
+}
+}

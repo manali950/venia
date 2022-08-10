@@ -1,0 +1,212 @@
+@import "./../variables";
+
+.secondBanner{
+    // background: #e5e5e7;
+    display: flex;
+    .row {
+        margin: 16px 0px 32px 0px;
+    }
+    .secondBanner__container{
+        // max-width: 1536px;
+        // padding: 0px 60px;
+        .secondBanner__content{
+            padding: 47px 47px 56px 0px;
+            margin: 0 auto;
+            .secondBanner__text{
+                display: contents;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                .secondBanner__title{
+                    font: $unnamed-font-style-normal normal $unnamed-font-weight-600 
+                    $unnamed-font-size-48 $unnamed-font-family-source-serif-pro;
+                    letter-spacing: $unnamed-character-spacing-0;
+                    color: $unnamed-color-172026;
+                    text-align: left;
+                    // font: normal normal 600 48px/60px Source Serif Pro;
+                    // letter-spacing: 0px;
+                    // color: #172026;
+                    opacity: 1;
+                   
+                    margin-block-start: 0rem;
+                    margin-block-end: 0rem;
+                }
+                .secondBanner__sub_title{
+                    font: $unnamed-font-style-normal $unnamed-font-style-normal
+                     $unnamed-font-weight-600 $unnamed-font-size-20 $unnamed-font-family-muli;
+                    letter-spacing: $unnamed-character-spacing-0;
+                    color: $unnamed-color-172026;
+                    text-align: left;
+                    // font: normal normal 600 20px/25px Muli;
+                    // letter-spacing: 0px;
+                    // color: #172026;
+                    opacity: 1;
+                   
+                    margin-block-start: 0rem;
+                    margin-block-end: 0rem;
+                }
+                .secondBanner__info{
+                    font: $unnamed-font-style-normal normal $unnamed-font-weight-normal $unnamed-font-size-16 $unnamed-font-family-muli;
+                    letter-spacing: $unnamed-character-spacing-0;
+                    color: $unnamed-color-172026;
+                    text-align: left;
+                    // font: normal normal normal 16px/24px Muli;
+                    // letter-spacing: 0px;
+                    // color: #172026;
+                    opacity: 1;
+                    margin-block-start: 0.5rem;
+                    margin-block-end: 1.5rem;
+                }
+                .secondBanner__btn_wrapper{
+
+               
+                    .secondBanner__btn{
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        
+                        outline: 0;
+                        display: inline-block;
+                        padding: 13px 56px 13px 51px;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0px;
+                        
+                        font-weight: bold;
+                    
+                        text-align: left;
+                        cursor: pointer;
+                        
+                    }
+                    .opp-org{
+                        border: 1px solid #E26A2C;
+                        color: #E26A2C;
+                        background-color: $white;
+                    }
+                    .org{
+                        border: 1px solid #E26A2C;
+                        color: $white;
+                        background-color: #E26A2C;
+                    }
+                }
+                .secondBanner__line{
+                    border-top: 8px solid #E26A2C;
+                    width: 26%;
+                    margin: 56px 0px 0px 0px;
+                
+                }
+            }
+        }
+    }
+    .secondBanner__wrapper{
+        width: -webkit-fill-available;
+        height: 450px;
+        overflow: hidden;
+        img{
+            float: left;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    @media screen and (max-width: ($Tablet - 342px)) and (min-width: ($Mobile)) {
+        // 768 - 426 - 320
+        .secondBanner__container{
+            .secondBanner__content{
+                padding: 16px 15px 0px 15px;
+                .secondBanner__text{
+                    .secondBanner__btn_wrapper{
+                        
+                        flex-direction: column-reverse !important;
+                        .secondBanner__btn{
+                            padding: 11px 44px 11px 45px;
+                            text-align: center;
+                        }
+                        .secondBanner__btn.opp-org{
+                            margin: 16px 0px 16px 0px;
+                        }
+                    }
+                    .secondBanner__line{
+                        margin: 16px auto;
+                    }
+                    .mr-rt-32 {
+                        margin-right: 0px !important;
+                    }
+                }
+            }
+        }
+         .secondBanner__wrapper {
+            height: 312px;
+        }
+    }
+    @include mobile{
+        .container {
+            padding: 0 15px;
+            width: 100%;
+        }
+        .secondBanner__container{
+            .secondBanner__content{
+                .secondBanner__text{
+                    text-align: center;
+                    .secondBanner__title{
+                        font: normal normal 600 36px Source Serif Pro;
+                        text-align: center;
+                    }
+                    .secondBanner__sub_title{
+                        font: normal normal 600 16px Muli;
+                        text-align: center;
+                    }
+                    .secondBanner__info{
+                        font: normal normal normal 14px Muli;
+                        text-align: center;
+                    }
+                    .secondBanner__btn_wrapper{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        width: 74%;
+                        margin: auto;
+                    }
+                    .secondBanner__line{
+                        margin: 32px auto;
+                    }
+                }
+                
+            }
+        }
+    }
+    @include Desktop {
+        .secondBanner__container{
+            .secondBanner__content{
+                .secondBanner__text{
+                    .secondBanner__title{
+                        font: normal normal 600 36px Source Serif Pro;
+                    }
+                    .secondBanner__sub_title{
+                        font: normal normal 600 16px Muli;
+                    }
+                    .secondBanner__info{
+                        font: normal normal normal 14px Muli
+                    }
+                }
+            }
+        }
+        .secondBanner__container .secondBanner__content .secondBanner__text .secondBanner__btn_wrapper .opp-org {
+            margin: 0px 32px 24px 0px;
+        }
+    }
+    @include Desktop-md {
+        
+    }
+    @media screen and (max-width: ($Desktop-md + 60)) and (min-width: ($Desktop + 1)) {
+        // 1280 +1325 - 1025
+        .secondBanner__container .secondBanner__content .secondBanner__text .secondBanner__btn_wrapper .opp-org {
+            margin: 0px 32px 24px 0px;
+        }
+    }
+    @include Desktop-lg {
+        
+    }
+    @include Desktop-xl {
+        
+    }
+}
