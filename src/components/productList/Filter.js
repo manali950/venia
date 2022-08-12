@@ -37,7 +37,7 @@ export default function Filter(props) {
             {/*  <a onClick={() =>props.filterSelection(category)}> {category} </a> */}
            
 
-            <p><a href="">Show more</a></p>
+            {/* <p><a href="">Show more</a></p>
 
             <div className="divider"></div>
             <p>Color</p>
@@ -50,7 +50,7 @@ export default function Filter(props) {
             <a href="#" className="btn btn-darkBlue"></a>
             <a href="#" className="btn btn-pink"></a>
             <a href="#" className="btn btn-orange"></a>
-            <a href="#" className="btn btn-rainbow"></a>
+            <a href="#" className="btn btn-rainbow"></a> */}
 
             
 

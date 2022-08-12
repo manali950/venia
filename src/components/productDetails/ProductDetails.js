@@ -64,18 +64,25 @@ export default function ProductDetails(props) {
       price: data.price,
     });
   };
-  const changeImgHandler = () => {
+  const changeImgHandler = (event) => {
     // alert("changeImgHandler");
-    var header = document.getElementsByClassName("preview-thumbnail");
-    var imgBtns = document.getElementsByClassName("imgBtn");
-    for (var i = 0; i < imgBtns.length; i++) {
-      // console.log(imgBtns[i]);
-      imgBtns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
+    const menuItem = document.querySelector(".productDetails").querySelectorAll(".imgBtn");
+    // console.log(menuItem);
+    menuItem.forEach((item) =>{
+      item.classList.remove("active");
+    });
+    event.target.classList.add("active");
+
+    // var header = document.getElementsByClassName("preview-thumbnail");
+    // var imgBtns = document.getElementsByClassName("imgBtn");
+    // for (var i = 0; i < imgBtns.length; i++) {
+    //   // console.log(imgBtns[i]);
+    //   imgBtns[i].addEventListener("click", function () {
+    //     var current = document.getElementsByClassName("active");
+    //     current[0].className = current[0].className.replace(" active", "");
+    //     this.className += " active";
+    //   });
+    // }
   };
 
   // const plusSlides = (n) => {
@@ -224,7 +231,7 @@ export default function ProductDetails(props) {
               {data.description.slice(0, 100 - 3) + "..."}
             </p>
             <div className="divider"></div>
-            <p>Color</p>
+            {/* <p>Color</p>
             <a href="#" className="btn btn-black"></a>
             <a href="#" className="btn btn-white"></a>
             <a href="#" className="btn btn-darkGreen"></a>
@@ -235,7 +242,7 @@ export default function ProductDetails(props) {
             <a className="size ">S</a>
             <a className="size ">M</a>
             <a className="size ">L</a>
-            <a className="size ">XL</a>
+            <a className="size ">XL</a> */}
 
             <p>Quantity</p>
             {/* <CartItemForm data={data}/> */}
@@ -287,7 +294,7 @@ export default function ProductDetails(props) {
                       src={data.image}
                       alt="product-img"
                       onClick={changeImgHandler}
-                      className="imgBtn active"
+                      className="imgBtn "
                     />
                   </a>
                 </li>
@@ -311,6 +318,7 @@ export default function ProductDetails(props) {
                     />
                   </a>
                 </li>
+                
               </ul>
             </div>
             <div className="aem-GridColumn  aem-GridColumn--default--9 aem-GridColumn--phone--12">
