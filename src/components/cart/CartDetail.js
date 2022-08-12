@@ -88,30 +88,33 @@ export default function CartDetail() {
                         <div className='card-body checkoutBody'>
                             <p className='checkoutTilte align'>Pricing Summary</p> 
                             <table>
-                            <tr>
-                                <td>Subtotal</td>
-                                <td>{totalAmount}</td>
-                            </tr>
-                            <tr>
-                                <td>Coupon</td>
-                                <td>- $ 50.00</td>
-                            </tr>
-                            <tr>
-                                <td>Gift Card</td>
-                                <td>- $ 30.00</td>
-                            </tr>
-                            <tr>
-                                <td>Estimated tax</td>
-                                <td>$ 40.00</td>
-                            </tr>
-                            <tr>
-                                <td>Estimated shipping</td>
-                                <td>$ 40.00</td>
-                            </tr>
-                            <tr>
-                                <th>Estimated Total</th>
-                                <th>{totalAmount}</th>
-                            </tr>
+                                <tbody>
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td>{totalAmount}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Coupon</td>
+                                    <td>- $ 50.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Gift Card</td>
+                                    <td>- $ 30.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Estimated tax</td>
+                                    <td>$ 40.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Estimated shipping</td>
+                                    <td>$ 40.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Estimated Total</th>
+                                    <th>{totalAmount}</th>
+                                </tr>
+                                </tbody>
                             </table>   
                             <div className="addtocart">
                                  {hasItems &&<button className='btn btn-blue addtocartBtn' ><Link to="/venia/products/checkout"><i className="fa fa-lock"></i> CHECKOUT</Link></button>}

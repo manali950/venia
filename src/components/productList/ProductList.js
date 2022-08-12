@@ -20,7 +20,6 @@ export default function ProductList() {
     const [pagination, setPagination] = useState(1);
     const [startIndexInitisal , setStartIndexInitisal ] = useState(0);
     const [endIndexInitisal , setEndIndexInitisal ] = useState(12);
-
     const [state, setState] = useState({
         products: data,
         filters: new Set(),
@@ -53,7 +52,7 @@ export default function ProductList() {
           .get("https://fakestoreapi.com/products")
           .then((resp) => {
             setData(resp.data);
-            console.log(resp.data);
+            // console.log(resp.data);
             setIsLoading(false);
             
           });
@@ -322,7 +321,7 @@ export default function ProductList() {
             // );
         
           setCatogery(distinctCategory.filter((x, i, a) => a.indexOf(x) == i));
-          console.log(category);
+        //   console.log(category);
           
       };
       const filterSelection = (category) => {
@@ -395,7 +394,7 @@ export default function ProductList() {
       };
 
       const nextPage = (event ,currentPage) => {
-        console.log(currentPage);
+        // console.log(currentPage);
         setPagination(currentPage);
         switch(currentPage) {
             case "1":{

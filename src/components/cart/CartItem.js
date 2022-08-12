@@ -33,7 +33,7 @@ export default function CartItem(props) {
                                         <button className="minus-btn" type="button"  onClick={props.onRemove}>
                                             -
                                         </button>
-                                        <input type="text" name="name" value={props.amount} />
+                                        <input type="text" name="name" value={props.amount} readOnly/>
                                         
                                         <button className="plus-btn" type="button"onClick={props.onAdd} >
                                             +

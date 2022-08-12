@@ -39,7 +39,7 @@ export default function FormPaymentInfo(props) {
       card_Exp: inputField.card_Exp,
       card_cvv: inputField.card_cvv
     }
-    console.log(formAdd, "info");
+    // console.log(formAdd, "info");
     checkOutCtx.addItem(formAdd);
 
     setInputField({
@@ -88,7 +88,7 @@ export default function FormPaymentInfo(props) {
 
                   <div className='wrapper mr-bt-16'>
                     <input type="radio" id="payment_credit" name="Payment_method" onChange={inputsHandler} value="payment_credit" onClick={() => setIsNotCredit(true)} />
-                    <label className='radio_input' for="payment_credit">Credit Card</label><br />
+                    <label className='radio_input' htmlFor="payment_credit">Credit Card</label><br />
                   </div>
 
                   {isCredit ?
@@ -142,7 +142,7 @@ export default function FormPaymentInfo(props) {
 
                   <div className='wrapper form_line'>
                     <input type="radio" id="payment_paypal" name="method" onChange={inputsHandler} value="payment_paypal" onClick={() => setIsNotCredit(false)} />
-                    <label className='radio_input pd-tp-bt-25' for="payment_paypal">PayPal</label><br />
+                    <label className='radio_input pd-tp-bt-25' htmlFor="payment_paypal">PayPal</label><br />
                   </div>
 
                   <div className='aem-GridColumn  aem-GridColumn--default--12 aem-GridColumn--phone--12 mr-bt-16 d-flex justify-content-center mr-tp-32 mr-bt-32 '>

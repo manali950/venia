@@ -31,7 +31,7 @@ export default function OrderPlaced() {
 
   return (
     <>
-       <Header />
+       {/* <Header /> */}
        {hasItems ?
        <section className='orderPlaced'>
         <div className='container'>
@@ -82,9 +82,9 @@ export default function OrderPlaced() {
                         <h2 className='orderPlaced_title'>{numberOfCartItems} items in your order </h2>
                       </div>
                       {cartCtx
-                      .items.map((item) => ( 
+                      .items.map((item,index) => ( 
                           
-                        <div className="aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12 padding-tp-bt-10 pd-rt-31">
+                        <div className="aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12 padding-tp-bt-10 pd-rt-31" key={index}>
                           <div className="aem-Grid aem-Grid--12 ">
                               <div className="aem-GridColumn  aem-GridColumn--default--4 aem-GridColumn--phone--6 d-flex">
                                   <img src={item.image} alt="product-img" className='card-img'/>
@@ -135,7 +135,7 @@ export default function OrderPlaced() {
         <p className="d-flex justify-content-center">Go back<button onClick={()=>history.push("/venia/products")}> <i className='fa fa-angle-double-left   '></i></button></p>
         </>
         }
-       <Footer />
+       {/* <Footer /> */}
     </>
   )
 }

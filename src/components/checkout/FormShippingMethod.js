@@ -24,7 +24,7 @@ export default function FormShippingMethod(props) {
         const formAdd = {
             method: inputField.method
         }
-        console.log(formAdd,"Method");
+        // console.log(formAdd,"Method");
 
         checkOutCtx.addItem(formAdd);
         setIsSubmited(true)
@@ -68,15 +68,15 @@ export default function FormShippingMethod(props) {
                         
                         <div className='wrapper'>
                             <input type="radio" id="method__std" name="method"  onChange={inputsHandler}  value="Standard_Shipping (4-8_business_days_via_USPS) FREE" required />
-                            <label className='radio_input' for="method__std">Standard Shipping (4-8 business days via USPS) FREE</label><br/>
+                            <label className='radio_input' htmlFor="method__std">Standard Shipping (4-8 business days via USPS) FREE</label><br/>
                         </div>
                         <div className='wrapper'>
                             <input type="radio" id="method__exp" name="method" onChange={inputsHandler}  value="Express_Delivery (2-5_business_days_via_USPS) $17.95" required />
-                            <label className='radio_input' for="method__exp">Express Delivery (2-5 business days via USPS) $17.95</label><br/>
+                            <label className='radio_input' htmlFor="method__exp">Express Delivery (2-5 business days via USPS) $17.95</label><br/>
                         </div>
                         <div className='wrapper'>
                             <input type="radio" id="method__next" name="method" onChange={inputsHandler}  value="Next_Day_Delivery (Next_business_days_via_FedEx) $53.61" required />
-                            <label className='radio_input' for="method__next">Next Day Delivery (Next business days via FedEx) $53.61</label><br/>
+                            <label className='radio_input' htmlFor="method__next">Next Day Delivery (Next business days via FedEx) $53.61</label><br/>
                         </div>
                         <div className='aem-GridColumn  aem-GridColumn--default--12 aem-GridColumn--phone--12 mr-bt-16 d-flex justify-content-center mr-tp-32 mr-bt-32'>
                             <button className='checkout__btn' type="submit" value="Submit" >CONTINUE TO PAYMENT</button>

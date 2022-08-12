@@ -6,9 +6,9 @@ import CartDetail from './cart/CartDetail';
 export default function Product() {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
         <CartDetail />
-    <Footer />
+    {/* <Footer /> */}
     </>
   )
 }

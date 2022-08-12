@@ -30,7 +30,7 @@ export default function ProductDetails(props) {
 
   let dispatch = useDispatch();
   const { product } = useSelector(state => state.product)
-  console.log(product,"redux");
+  // console.log(product,"redux");
   
 
 
@@ -49,7 +49,7 @@ export default function ProductDetails(props) {
     axios.get(`https://fakestoreapi.com/products/${id}`).then((resp) => {
       setData(resp.data);
       setStar(resp.data.rating.rate);
-      console.log(resp.data);
+      // console.log(resp.data);
       setIsLoading(false);
       // starFun(star);
     });
@@ -69,7 +69,7 @@ export default function ProductDetails(props) {
     var header = document.getElementsByClassName("preview-thumbnail");
     var imgBtns = document.getElementsByClassName("imgBtn");
     for (var i = 0; i < imgBtns.length; i++) {
-      console.log(imgBtns[i]);
+      // console.log(imgBtns[i]);
       imgBtns[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
@@ -84,7 +84,7 @@ export default function ProductDetails(props) {
   // };
 
   const currentSlide = (n) => {
-    console.log(n,"currentSlide");
+    // console.log(n,"currentSlide");
     // alert(n+"currentSlide");
     // setSlideIndex(parseInt(n))
     // alert(n+"slideIndex");
@@ -96,7 +96,7 @@ export default function ProductDetails(props) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
-     console.log("First Time");
+    //  console.log("First Time");
 
     // if (n > slides.length) { 
     //   slideIndex = 1;
@@ -110,7 +110,7 @@ export default function ProductDetails(props) {
     for (i = 0; i < slides.length; i++) {
       //  slides[i].className += " displayNon";
        slides[i].style.display = "none";
-       console.log("in fun First Time");
+      //  console.log("in fun First Time");
     }
       // setSlideIndex(slideIndex - 1);
       // alert(n+"slideIndex");
@@ -204,9 +204,9 @@ export default function ProductDetails(props) {
             <p className="price">${data.price}</p>
             <div className="rating">
               <div className="stars">
-                {arrStar.map((arrStar) => (
+                {arrStar.map((arrStar,index) => (
                   //  <span className="fa fa-star ${arrStar} ? ${arrStar} : ${arrStar}"></span>
-                  <span
+                  <span key={index}
                     className={"fa fa-star " + (arrStar ? arrStar : arrStar)}
                   ></span>
                 ))}

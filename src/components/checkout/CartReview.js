@@ -17,9 +17,9 @@ export default function CartReview() {
     let content = <p>Your Cart is Empty.</p>;
     if(cartCtx.items.length !== 0){
         content = cartCtx
-        .items.map((item) => ( 
-            <>
-            <div className="aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12 ">
+        .items.map((item,index) => ( 
+            
+            <div className="aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12 " key={index}>
                 <div className='card'>
                     <div className="aem-Grid aem-Grid--12 ">
                         <div className="aem-GridColumn  aem-GridColumn--default--4 aem-GridColumn--phone--6">
@@ -34,12 +34,6 @@ export default function CartReview() {
                     </div>
                 </div>
             </div>
-            {/* <li>{item.title}-title</li>
-            <li>{item.image}-image</li>
-            <li>{item.price}-price</li>
-            <li>{item.amount}-amount</li> */}
-            
-            </>
            
         ));
       }

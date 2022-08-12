@@ -88,7 +88,7 @@ export default class OrderGenerator extends Component {
     
         render() {
             return (
-                 <button type="submit" onClick={this.onClickVC} className="btn btn-primary invoice">Invoice &nbsp;&nbsp;&nbsp; <i class="fa fa-download" aria-hidden="true"></i></button>
+                 <button type="submit" onClick={this.onClickVC} className="btn btn-primary invoice">Invoice &nbsp;&nbsp;&nbsp; <i className="fa fa-download" aria-hidden="true"></i></button>
                 
             )
         }

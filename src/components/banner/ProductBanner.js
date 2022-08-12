@@ -9,9 +9,9 @@ export default function ProductBanner() {
                 <div className="aem-Grid aem-Grid--default--8 aem-Grid--phone--12 reverse">
                 <div className="aem-GridColumn  aem-GridColumn--default--3 aem-GridColumn--phone--12 phn-container d-flex">
                     <div className='card'>
-                    <p className='text'>Women’s Outerwear
+                    <p className='text'>Women’s Outerwear</p>
                     <div className='line'></div>
-                    </p>
+                    
                     
                     </div>
                 </div>

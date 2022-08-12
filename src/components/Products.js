@@ -8,10 +8,10 @@ import ProductBanner from './banner/ProductBanner';
 export default function Products() {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
         <ProductBanner />
         <ProductList />
-    <Footer />
+    {/* <Footer /> */}
     </>
   )
 }

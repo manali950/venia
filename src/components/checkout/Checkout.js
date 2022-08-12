@@ -24,7 +24,7 @@ export default function Checkout() {
     
   return (
     <>
-        <Header />
+        {/* <Header /> */}
         {hasItems ?
         <section className='checkout'>
             <div className='container'>
@@ -50,30 +50,32 @@ export default function Checkout() {
                                 <div className='card-body checkoutBody'>
                                     <p className='checkoutTilte align'>Pricing Summary</p> 
                                     <table>
-                                        <tr>
-                                            <td>Subtotal</td>
-                                            <td>{totalAmount}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Coupon</td>
-                                            <td>- $ 50.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gift Card</td>
-                                            <td>- $ 30.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Estimated tax</td>
-                                            <td>$ 40.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Estimated shipping</td>
-                                            <td>$ 40.00</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Estimated Total</th>
-                                            <th>{totalAmount}</th>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>Subtotal</td>
+                                                <td>{totalAmount}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Coupon</td>
+                                                <td>- $ 50.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gift Card</td>
+                                                <td>- $ 30.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Estimated tax</td>
+                                                <td>$ 40.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Estimated shipping</td>
+                                                <td>$ 40.00</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Estimated Total</th>
+                                                <th>{totalAmount}</th>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>   
@@ -91,7 +93,7 @@ export default function Checkout() {
         <p className="d-flex justify-content-center">Go back<button onClick={()=>history.push("/venia/products")}> <i className='fa fa-angle-double-left   '></i></button></p>
         </>
         }
-        <Footer />
+        {/* <Footer /> */}
     </>
   )
 }

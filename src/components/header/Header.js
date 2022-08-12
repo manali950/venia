@@ -33,6 +33,14 @@ export default function Header() {
     return curNumber + item.amount;
   }, 0);
 
+  const activeLinks = (event) => {
+    const menuItem = document.querySelector(".header").querySelector(".center").childNodes;
+    menuItem.forEach((item) =>{
+      item.classList.remove("active");
+    });
+    event.target.classList.add("active");
+  }
+
 
   return (
     <header className="header">
@@ -51,19 +59,19 @@ export default function Header() {
               </div>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--4 logo-center">
-              <a  className="links"><img className="logo "
+              <a href="/venia" className=""><img className="logo "
               onClick={()=>history.push("/venia")}
                src={process.env.PUBLIC_URL + `/assets/icons/logo2.png`} alt="logo" />
               </a>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--hide">
               <div className="center">
-              <Link to="/venia" className="links mr-rt-32 active">Home</Link>
-              {/* <Link to="/venia/products" className="links mr-rt-32 ">productList</Link> */}
-              <Link to="/venia/products"  className="links mr-rt-32">Women</Link>
-              <Link to="/venia/products"  className="links mr-rt-32">Men</Link>
-              <Link to="/venia/products"  className="links mr-rt-32">Electronics</Link>
-              <Link to="/venia/products"  className="links">Jewellery</Link>
+              <Link to="/venia" onClick={activeLinks} className="links mr-rt-32 active">Home</Link>
+              {/* <Link to="/venia/products" onClick={activeLinks} className="links mr-rt-32 ">productList</Link> */}
+              <Link to="/venia/products"   onClick={activeLinks} className="links mr-rt-32">Women</Link>
+              <Link to="/venia/products"  onClick={activeLinks} className="links mr-rt-32">Men</Link>
+              <Link to="/venia/products"  onClick={activeLinks} className="links mr-rt-32">Electronics</Link>
+              <Link to="/venia/products"  onClick={activeLinks} className="links">Jewellery</Link>
               {/* <NavLink to="/venia/products" className={`links mr-rt-32 ${isActive =>  !isActive ? "links mr-rt-32" : "active" }`} >
               Women
               </NavLink> */}
@@ -72,8 +80,8 @@ export default function Header() {
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--4 text-right">
               <div>
-              <Link to={`/venia/products/cart`}   className="links cart-bg">
-              <svg className={`cart-icon ${btnIsHighlighted ? "bump" : ""}`} xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22"><g id="shopping-bag" transform="translate(-2 -1)"><path id="Path_38093" data-name="Path 38093" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line id="Line_555" data-name="Line 555" x2="18" transform="translate(3 6)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></line><path id="Path_38094" data-name="Path 38094" d="M16,10a4,4,0,0,1-8,0" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></svg>
+              <Link to={`/venia/products/cart`}   className=" cart-bg">
+              <svg className={`cart-icon ${btnIsHighlighted ? "bump" : ""}`} xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22"><g id="shopping-bag" transform="translate(-2 -1)"><path id="Path_38093" data-name="Path 38093" d="M6,2,3,6V20a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2V6L18,2Z" fill="none" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path><line id="Line_555" data-name="Line 555" x2="18" transform="translate(3 6)" fill="none" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></line><path id="Path_38094" data-name="Path 38094" d="M16,10a4,4,0,0,1-8,0" fill="none" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"></path></g></svg>
               {/* <img className={`cart-icon bump `} src={process.env.PUBLIC_URL + `/assets/icons/cart.png`} alt="cart icon"/> */}
               <span className='badge badge-warning' id='lblCartCount'>{numberOfCartItems}</span>
               </Link>

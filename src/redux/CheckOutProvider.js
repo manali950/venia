@@ -26,7 +26,7 @@ const checkOutReducer = (state, action) => {
 
           updatedItems = action.item;
         }
-        console.log(updatedItems,"formData");
+        // console.log(updatedItems,"formData");
         
         return {
             items: updatedItems,

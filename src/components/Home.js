@@ -10,12 +10,12 @@ import Footer from './footer/Footer';
 export default function Home() {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <Banner />
     <ProductCard />
     <SecondBanner />
     <ThirdBanner />
-    <Footer />
+    {/* <Footer /> */}
     </>
   )
 }

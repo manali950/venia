@@ -36,7 +36,7 @@ export default function FormShippingInfo(props) {
        }
     //    setIsCSC({...isCSC,countries:csc.getAllCountries()});
         //  setIsCSC({...isCSC,states:csc.getStatesOfCountry('IN')});
-        console.log(csc.getStatesOfCountry('IN'));
+        // console.log(csc.getStatesOfCountry('IN'));
     }, []);
 
     const [inputField , setInputField] = useState({
@@ -62,7 +62,7 @@ export default function FormShippingInfo(props) {
        
         // console.log(Country.getAllCountries());
           setIsCSC({...isCSC,states:csc.getStatesOfCountry(inputField.country)});
-         console.log(isCSC.states,"isCSC.states");
+        //  console.log(isCSC.states,"isCSC.states");
          setInputField( {...inputField,state: e.target.value} )
     }
 
@@ -80,7 +80,7 @@ export default function FormShippingInfo(props) {
             setEmailIsValid(true);
             return true;
         }else{
-            alert("email is incorrect ");
+            // alert("email is incorrect ");
             setEmailIsValid(false);
             email.current.focus();
             return false;
@@ -99,7 +99,7 @@ export default function FormShippingInfo(props) {
             setPhoneIsValid(true)
             return true;
         }else{
-            alert("phoneNumber is incorrect ");
+            // alert("phoneNumber is incorrect ");
             setPhoneIsValid(false);
             phoneNumber.current.focus();
             return false;
@@ -136,7 +136,7 @@ export default function FormShippingInfo(props) {
                 state: state.current.value,
                 zip: zip.current.value,
             }
-            console.log(formAdd,"info");
+            // console.log(formAdd,"info");
              checkOutCtx.addItem(formAdd);
             
              setInputField( {

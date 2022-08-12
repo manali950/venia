@@ -7,9 +7,9 @@ import ProductDetails from './productDetails/ProductDetails';
 export default function Product() {
   return (
     <>
-    <Header />
+    {/* <Header /> */}
         <ProductDetails />
-    <Footer />
+    {/* <Footer /> */}
     </>
   )
 }
