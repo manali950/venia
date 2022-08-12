@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/venia/static/css/main.13d310c7.css",
-    "main.js": "/venia/static/js/main.9ebabb37.js",
+    "main.css": "/venia/static/css/main.4ff1372c.css",
+    "main.js": "/venia/static/js/main.ad150a59.js",
     "static/js/498.91333fe8.chunk.js": "/venia/static/js/498.91333fe8.chunk.js",
     "static/js/703.fa5756ca.chunk.js": "/venia/static/js/703.fa5756ca.chunk.js",
     "static/js/142.0fa62eeb.chunk.js": "/venia/static/js/142.0fa62eeb.chunk.js",
     "static/js/787.694ae834.chunk.js": "/venia/static/js/787.694ae834.chunk.js",
     "index.html": "/venia/index.html",
-    "static/media/down-arrow-btn.svg": "/venia/static/media/down-arrow-btn.c0c85f0327c8b7a8c6de.svg",
-    "static/media/check.svg": "/venia/static/media/check.ffd4d9f896701562a4cb.svg",
-    "static/media/check2.svg": "/venia/static/media/check2.388123a2385c15dd16c5.svg",
-    "main.13d310c7.css.map": "/venia/static/css/main.13d310c7.css.map",
-    "main.9ebabb37.js.map": "/venia/static/js/main.9ebabb37.js.map",
+    "static/media/down-arrow-btn.svg": "/venia/static/media/down-arrow-btn.de0992c7683824004712.svg",
+    "static/media/check.svg": "/venia/static/media/check.86836cf3d3d76efb7f5b.svg",
+    "static/media/check2.svg": "/venia/static/media/check2.433ab9466149c81576b3.svg",
+    "main.4ff1372c.css.map": "/venia/static/css/main.4ff1372c.css.map",
+    "main.ad150a59.js.map": "/venia/static/js/main.ad150a59.js.map",
     "498.91333fe8.chunk.js.map": "/venia/static/js/498.91333fe8.chunk.js.map",
     "703.fa5756ca.chunk.js.map": "/venia/static/js/703.fa5756ca.chunk.js.map",
     "142.0fa62eeb.chunk.js.map": "/venia/static/js/142.0fa62eeb.chunk.js.map",
     "787.694ae834.chunk.js.map": "/venia/static/js/787.694ae834.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d310c7.css",
-    "static/js/main.9ebabb37.js"
+    "static/css/main.4ff1372c.css",
+    "static/js/main.ad150a59.js"
   ]
 }
