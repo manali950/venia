@@ -1,5 +1,4 @@
 import React, { useCallback, useState, useEffect } from "react";
-import axios from "axios";
 import './productList.scss';
 import './loading-placeHolder.scss';
 import Filter from "./Filter";
@@ -41,30 +40,19 @@ export default function ProductList() {
 
 
     useEffect(() => {
-        fetchHandler();
-        dispatch(getProducts());
-       
+        setIsLoading(true);
+        dispatch(getProducts((items) => {
+            return setData(items),setIsLoading(false);;
+        }));
+        
     },[]);
-
-    // const products = useSelector((state) => state.products);
-    // console.log(products,"products");
+ 
 
     useEffect(() => {
         checkDistinct();
     }, [data]);
 
-    const fetchHandler = (event) => {
-        setIsLoading(true);
-        axios
-            .get("https://fakestoreapi.com/products")
-            .then((resp) => {
-                setData(resp.data);
-                setIsLoading(false);
 
-            });
-
-
-    }
     var dataLimit = 12;
     var pageLimit = 2;
     const [pages] = useState(Math.round(20 / dataLimit));
@@ -270,32 +258,25 @@ export default function ProductList() {
                     </div>
                 </>
             ))
-        paginationCount =
-            <>
-                <a ><button onClick={event => nextPage(event, "1")}>1</button></a>
-                <a ><button onClick={event => nextPage(event, "2")}>2</button></a>
-            </>
+  
 
     }
 
     const checkDistinct = () => {
-        var distinctCategory = [];
-        for (var i = 0; i < data.length; i++) {
+        let distinctCategory = [];
+        for (let i = 0; i < data.length; i++) {
             distinctCategory.push(data[i].category);
         }
-
-
-        setOperation({...operation,category:distinctCategory.filter((x, i, a) => a.indexOf(x) == i)});
-
-
+        const filtered =  distinctCategory.filter((x, i, a) => a.indexOf(x) == i);
+        setOperation({
+            ...operation,
+            category:filtered
+        });
     };
     const filterSelection = (category) => {
-
         setOperation({...operation,search:category});
-
     };
     const onSelect = () => {
-
         let getValue = document.getElementById("sort").value;
         switch (getValue) {
             case "sortByLatest":
@@ -351,53 +332,22 @@ export default function ProductList() {
                     highToLow: false,
                     lowToHigh: false
                 })
-                fetchHandler();
+                
 
             }
                 break;
             default:
-                // setHighToLow(false); 
-                // setLowToHigh(false); 
                 setIsSort({
                     latest: false,
                     oldest: false,
                     highToLow: false,
                     lowToHigh: false
                 })
-                fetchHandler();
 
         }
 
     };
 
-    const nextPage = (event, currentPage) => {
-
-        setPagination({ ...pagination, default: currentPage });
-        switch (currentPage) {
-            case "1": {
-
-                setPagination({
-                    ...pagination,
-                    startIndexInitisal: 0,
-                    endIndexInitisal: 12
-                });
-                console.log(pagination.startIndexInitisal);
-                break;
-            }
-            case "2": {
-
-                setPagination({
-                    ...pagination,
-                    startIndexInitisal: pagination.startIndexInitisal + 12,
-                    endIndexInitisal: pagination.endIndexInitisal + 12
-                });
-                break;
-            }
-
-            default:
-                alert("Page End");
-        }
-    }
 
 
     const handleFilterChange = useCallback(event => {
