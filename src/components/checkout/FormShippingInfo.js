@@ -34,9 +34,7 @@ export default function FormShippingInfo(props) {
        if(props.hasItems){
         setIsSubmited(true);
        }
-    //    setIsCSC({...isCSC,countries:csc.getAllCountries()});
-        //  setIsCSC({...isCSC,states:csc.getStatesOfCountry('IN')});
-        // console.log(csc.getStatesOfCountry('IN'));
+
     }, []);
 
     const [inputField , setInputField] = useState({
@@ -53,16 +51,13 @@ export default function FormShippingInfo(props) {
     })
     const countryHandler = (e) =>{
        
-        // console.log(Country.getAllCountries());
+       
          setIsCSC({...isCSC,countries:csc.getAllCountries()});
-        // console.log(isCSC.countries,"isCSC.countries");
         setInputField( {...inputField,country: e.target.value} )
     }
     const stateHandler = (e) =>{
        
-        // console.log(Country.getAllCountries());
           setIsCSC({...isCSC,states:csc.getStatesOfCountry(inputField.country)});
-        //  console.log(isCSC.states,"isCSC.states");
          setInputField( {...inputField,state: e.target.value} )
     }
 
@@ -76,11 +71,9 @@ export default function FormShippingInfo(props) {
         const enteredEmail = email.current.value;
        
         if(enteredEmail.match(regexEmail)){
-            // alert("email is correct ");
             setEmailIsValid(true);
             return true;
         }else{
-            // alert("email is incorrect ");
             setEmailIsValid(false);
             email.current.focus();
             return false;
@@ -95,11 +88,9 @@ export default function FormShippingInfo(props) {
         const enteredPhone = phoneNumber.current.value;
        
         if(enteredPhone.match(regexPhone)){
-            // alert("phoneNumber is correct ");
             setPhoneIsValid(true)
             return true;
         }else{
-            // alert("phoneNumber is incorrect ");
             setPhoneIsValid(false);
             phoneNumber.current.focus();
             return false;
@@ -111,19 +102,10 @@ export default function FormShippingInfo(props) {
 
     const submitHandler = (event) =>{
         event.preventDefault();
-        // alert("submited");
-        // if (
-        //     inputField.email.trim().length === 0 ||
-        //     inputField.email < 5 ||
-        //     inputField.email > 25
-        //   ) {
-        //     alert("helo");
-        //     setAmountIsValid(false);
-        //     return;
-        //   }
+       
              
         if(validateEmail() && validatePhone()){
-            // alert("return true")
+            
             const formAdd = {
                 email: email.current.value,
                 phoneNumber: phoneNumber.current.value,
@@ -136,7 +118,7 @@ export default function FormShippingInfo(props) {
                 state: state.current.value,
                 zip: zip.current.value,
             }
-            // console.log(formAdd,"info");
+           
              checkOutCtx.addItem(formAdd);
             
              setInputField( {
@@ -184,7 +166,7 @@ export default function FormShippingInfo(props) {
 
   return (
     <>
-    {/* {checkOutCtx.items.email} */}
+    
     {!isSubmited  ? 
     <div className="form_shipping_info">
         <h1 className='checkout_title'>Guest Checkout</h1>

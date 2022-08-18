@@ -1,7 +1,5 @@
 import React from 'react';
 import './orderPlaced.scss';
-import Footer from '../footer/Footer';
-import Header from './../header/Header';
 import CartContext from '../../redux/cart-context';
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
@@ -31,7 +29,6 @@ export default function OrderPlaced() {
 
   return (
     <>
-       {/* <Header /> */}
        {hasItems ?
        <section className='orderPlaced'>
         <div className='container'>
@@ -135,7 +132,6 @@ export default function OrderPlaced() {
         <p className="d-flex justify-content-center">Go back<button onClick={()=>history.push("/venia/products")}> <i className='fa fa-angle-double-left   '></i></button></p>
         </>
         }
-       {/* <Footer /> */}
     </>
   )
 }

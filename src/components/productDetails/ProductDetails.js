@@ -19,7 +19,7 @@ export default function ProductDetails(props) {
   const [star, setStar] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [initialLoading, setInitialLoading] = useState(true);
-  // const [slideIndex, setSlideIndex] = useState(1);
+  
 
   const param = useParams();
   let id = param.id;
@@ -39,10 +39,7 @@ export default function ProductDetails(props) {
     dispatch(getProduct(id));
   }, []);
 
-  useEffect(() => {
-    // if(data.length>0) showSlides(slideIndex);
-    // isLoading ? showSlides(slideIndex) : showSlides(slideIndex) ;
-  }, [data]);
+
 
   const fetchHandler = (event) => {
     setIsLoading(true);
@@ -55,7 +52,7 @@ export default function ProductDetails(props) {
     });
   };
   const addToCartHandler = (amount) => {
-    // Here u create new field for storing in context
+   
     cartCtx.addItem({
       id: data.id,
       image: data.image,
@@ -65,64 +62,39 @@ export default function ProductDetails(props) {
     });
   };
   const changeImgHandler = (event) => {
-    // alert("changeImgHandler");
+
     const menuItem = document.querySelector(".productDetails").querySelectorAll(".imgBtn");
-    // console.log(menuItem);
+    
     menuItem.forEach((item) =>{
       item.classList.remove("active");
     });
     event.target.classList.add("active");
 
-    // var header = document.getElementsByClassName("preview-thumbnail");
-    // var imgBtns = document.getElementsByClassName("imgBtn");
-    // for (var i = 0; i < imgBtns.length; i++) {
-    //   // console.log(imgBtns[i]);
-    //   imgBtns[i].addEventListener("click", function () {
-    //     var current = document.getElementsByClassName("active");
-    //     current[0].className = current[0].className.replace(" active", "");
-    //     this.className += " active";
-    //   });
-    // }
+    
   };
 
-  // const plusSlides = (n) => {
-  //   setSlideIndex(slideIndex += parseInt(n))
-  //   showSlides(slideIndex);
-  // };
+  
 
   const currentSlide = (n) => {
-    // console.log(n,"currentSlide");
-    // alert(n+"currentSlide");
-    // setSlideIndex(parseInt(n))
-    // alert(n+"slideIndex");
+    
     showSlides(n);
   };
 
   const showSlides = (n) => {
-    // alert(n+"showSlides Fun");
+    
     let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
-    //  console.log("First Time");
-
-    // if (n > slides.length) { 
-    //   slideIndex = 1;
-    //   console.log("n > slides.length");
-    // }
-    // if (n < 1) { 
-    //   slideIndex = slides.length;
-    //   console.log("n < 1");
-    // }
+    
 
     for (i = 0; i < slides.length; i++) {
-      //  slides[i].className += " displayNon";
+     
        slides[i].style.display = "none";
-      //  console.log("in fun First Time");
+      
     }
-      // setSlideIndex(slideIndex - 1);
-      // alert(n+"slideIndex");
+      
       slides[n-1].style.display = "block"; 
-      // slides[slideIndex-1].className = slides[0].className.replace(" displayNon", "");
+     
 
 
   };
@@ -138,9 +110,9 @@ export default function ProductDetails(props) {
       arrStar.push("");
     }
     if (countstar != 0) countstar--;
-    // var countstar[i] = `${star} ? "checked" : "" `;
+  
   }
-  //  console.log(arrStar);
+  
 
   let content = <p>Found no Data.</p>;
   let contentImg;
@@ -184,7 +156,7 @@ export default function ProductDetails(props) {
       </div>
     );
   }
-  // if(data.length>0) {showSlides(1)};
+
   if (data.id > 0) {
     content = (
       <div
@@ -327,25 +299,23 @@ export default function ProductDetails(props) {
               <>
               <div className="slideshow-container">
                 <div className="mySlides fade">
-                  {/* <div className="numbertext">1 / 3</div> */}
+                 
                   <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
-                  {/* <div className="text">Caption Text</div> */}
+                  
                 </div>
 
                 <div className="mySlides fade">
-                  {/* <div className="numbertext">2 / 3</div> */}
                   <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
-                  {/* <div className="text">Caption Two</div> */}
+                  
                 </div>
 
                 <div className="mySlides fade">
-                  {/* <div className="numbertext">3 / 3</div> */}
+                  
                   <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" />
-                  {/* <div className="text">Caption Three</div> */}
+                  
                 </div>
 
-                {/* <a className="prev" onclick="plusSlides(-1)">❮</a>
-                <a className="next" onclick="plusSlides(1)">❯</a> */}
+                
               </div>
               <br />
 
@@ -353,9 +323,7 @@ export default function ProductDetails(props) {
               </>
               }
               <div className="dot-container custom--desktop--hide">
-                {/* <span className="dot" onClick={event => currentSlide(1)}></span>
-                <span className="dot" onClick={event => currentSlide(2)}></span>
-                <span className="dot" onClick={event => currentSlide(3)}></span> */}
+               
                  <span className="dot" ></span>
                 <span className="dot" ></span>
                 <span className="dot" ></span>
@@ -381,12 +349,7 @@ export default function ProductDetails(props) {
               <div className="aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12">
                 <div>{contentImg}</div>
 
-                {/* <div className='card-detail'>
-                  <div className='card-body-detail'>
-                    <p className='title'>{data.title}</p>
-                    <p className='title'>{data.description}</p>
-                  </div>
-                </div> */}
+                
               </div>
               <div className="aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12">
                 {" "}

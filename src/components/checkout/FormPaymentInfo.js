@@ -8,7 +8,7 @@ import CartReview from './CartReview';
 export default function FormPaymentInfo(props) {
 
   const checkOutCtx = useContext(CheckOutContext);
-  const [isCredit, setIsNotCredit] = useState(false);
+  const [isCredit, setIsNotCredit] = useState(true);
   const [isSubmited, setIsSubmited] = useState(false);
 
   const [inputField, setInputField] = useState({
@@ -87,7 +87,7 @@ export default function FormPaymentInfo(props) {
                   <h2 className='checkout_subTitle2'>3. Payment Information</h2>
 
                   <div className='wrapper mr-bt-16'>
-                    <input type="radio" id="payment_credit" name="Payment_method" onChange={inputsHandler} value="payment_credit" onClick={() => setIsNotCredit(true)} />
+                    <input type="radio" id="payment_credit" name="Payment_method" onChange={inputsHandler} value="payment_credit" onClick={() => setIsNotCredit(true)} defaultChecked="checked" />
                     <label className='radio_input' htmlFor="payment_credit">Credit Card</label><br />
                   </div>
 
@@ -99,7 +99,7 @@ export default function FormPaymentInfo(props) {
                           <input type="text" id="card_name" name="card_name"  placeholder="Name on Card.."
                             onChange={inputsHandler}
                             value={inputField.card_name}
-                            required
+                            
                           />
                         </div>
                         <div className='aem-GridColumn  aem-GridColumn--default--6 aem-GridColumn--phone--12 col mr-bt-16'></div>
@@ -141,7 +141,7 @@ export default function FormPaymentInfo(props) {
                     : ""}
 
                   <div className='wrapper form_line'>
-                    <input type="radio" id="payment_paypal" name="method" onChange={inputsHandler} value="payment_paypal" onClick={() => setIsNotCredit(false)} />
+                    <input type="radio" id="payment_paypal" name="Payment_method" onChange={inputsHandler} value="payment_paypal" onClick={() => setIsNotCredit(false)} />
                     <label className='radio_input pd-tp-bt-25' htmlFor="payment_paypal">PayPal</label><br />
                   </div>
 

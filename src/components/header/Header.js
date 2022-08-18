@@ -59,14 +59,14 @@ export default function Header() {
               </div>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--4 logo-center">
-              <a href="/venia" className=""><img className="logo "
-              onClick={()=>history.push("/venia")}
+              <a href="/" className=""><img className="logo "
+              onClick={()=>history.push("/")}
                src={process.env.PUBLIC_URL + `/assets/icons/logo2.png`} alt="logo" />
               </a>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--hide">
               <div className="center">
-              <Link to="/venia" onClick={activeLinks} className="links mr-rt-32 active">Home</Link>
+              <Link to="/" onClick={activeLinks} className="links mr-rt-32 active">Home</Link>
               {/* <Link to="/venia/products" onClick={activeLinks} className="links mr-rt-32 ">productList</Link> */}
               <Link to="/venia/products"   onClick={activeLinks} className="links mr-rt-32">Women</Link>
               <Link to="/venia/products"  onClick={activeLinks} className="links mr-rt-32">Men</Link>

@@ -36,6 +36,19 @@ export default function FormShippingMethod(props) {
         setInputField( {
             method: checkOutCtx.items.method
         } );
+        setTimeout(()=>{
+            const method = document.querySelector(".form_shipping_method").querySelectorAll('[name="method"]');
+          
+
+            method.forEach((item) =>{
+                if(item.value === inputField.method ){
+                    item.checked = true;
+                    console.log(item,"item value");
+                }
+                
+              });           
+        },1)
+       
         props.setEditedInfo(true);
         props.setEditedMethod(false);
 
@@ -65,17 +78,16 @@ export default function FormShippingMethod(props) {
                 <div className='aem-GridColumn  aem-GridColumn--default--12 aem-GridColumn--phone--12 '>
                     <div>
                         <h2 className='checkout_subTitle2'>2. Shipping Method</h2>
-                        
                         <div className='wrapper'>
-                            <input type="radio" id="method__std" name="method"  onChange={inputsHandler}  value="Standard_Shipping (4-8_business_days_via_USPS) FREE" required />
+                            <input type="radio" id="method__std" name="method"  onChange={inputsHandler}  value="Standard_Shipping" required defaultChecked="checked" />
                             <label className='radio_input' htmlFor="method__std">Standard Shipping (4-8 business days via USPS) FREE</label><br/>
                         </div>
                         <div className='wrapper'>
-                            <input type="radio" id="method__exp" name="method" onChange={inputsHandler}  value="Express_Delivery (2-5_business_days_via_USPS) $17.95" required />
+                            <input type="radio" id="method__exp" name="method" onChange={inputsHandler}  value="Express_Delivery" required />
                             <label className='radio_input' htmlFor="method__exp">Express Delivery (2-5 business days via USPS) $17.95</label><br/>
                         </div>
                         <div className='wrapper'>
-                            <input type="radio" id="method__next" name="method" onChange={inputsHandler}  value="Next_Day_Delivery (Next_business_days_via_FedEx) $53.61" required />
+                            <input type="radio" id="method__next" name="method" onChange={inputsHandler}  value="Next_Day_Delivery" required />
                             <label className='radio_input' htmlFor="method__next">Next Day Delivery (Next business days via FedEx) $53.61</label><br/>
                         </div>
                         <div className='aem-GridColumn  aem-GridColumn--default--12 aem-GridColumn--phone--12 mr-bt-16 d-flex justify-content-center mr-tp-32 mr-bt-32'>

@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import { Provider } from 'react-redux';
@@ -20,9 +20,7 @@ import OrderPlaced from './components/orderPlace/OrderPlaced';
 
 
 
-// const Home = lazy(() => import('./components/Home')); 
-// const Products = lazy(() => import('./components/Products')); 
-// const Product = lazy(() => import('./components/Product'));  
+ 
 
 function App() {
   return (
@@ -30,10 +28,9 @@ function App() {
       <CartProvider>
         <CheckOutProvider>
           <Router>
-            <Suspense fallback={"Loading"}>
               <Header />
                 <Switch>
-                  <Route exact path="/venia/" component={Home}  />
+                  <Route exact path="/" component={Home}  />
                   <Route exact path="/venia/products" component={Products}  />
                   <Route exact path="/venia/products/ProductDetails/:id" component={Product} />
                   <Route exact path="/venia/products/cart" component={Cart} />
@@ -44,7 +41,6 @@ function App() {
                   <Route exact path="/venia/*" component={Nothing}  />
                 </Switch>
               <Footer />
-            </Suspense>
           </Router>
         </CheckOutProvider>
       </CartProvider>  

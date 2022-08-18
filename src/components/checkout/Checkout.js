@@ -1,6 +1,4 @@
 import React, { useContext, useState } from "react";
-import Footer from '../footer/Footer';
-import Header from './../header/Header';
 import './checkout.scss';
 import FormShippingInfo from './FormShippingInfo';
 import FormShippingMethod from './FormShippingMethod';
@@ -24,7 +22,6 @@ export default function Checkout() {
     
   return (
     <>
-        {/* <Header /> */}
         {hasItems ?
         <section className='checkout'>
             <div className='container'>
@@ -44,7 +41,6 @@ export default function Checkout() {
                             <FormPaymentInfo isEditedMethod={isSubmitedFormShippingMethod} setEditedMethod={setIsSubmitedFormShippingMethod} hasItems={hasItemsData} />
 
                         </div>
-                        {/* end From */}
                         <div className='aem-GridColumn  aem-GridColumn--default--4 aem-GridColumn--phone--12 '>
                             <div className='card border'>
                                 <div className='card-body checkoutBody'>
@@ -93,7 +89,6 @@ export default function Checkout() {
         <p className="d-flex justify-content-center">Go back<button onClick={()=>history.push("/venia/products")}> <i className='fa fa-angle-double-left   '></i></button></p>
         </>
         }
-        {/* <Footer /> */}
     </>
   )
 }

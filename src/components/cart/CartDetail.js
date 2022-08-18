@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { useHistory, Link } from 'react-router-dom';
 import CartContext from '../../redux/cart-context';
-import Footer from '../footer/Footer'
-import Header from '../header/Header'
 import "./cartDetail.scss";
 import CartItem from './CartItem';
 
