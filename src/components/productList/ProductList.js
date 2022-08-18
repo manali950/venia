@@ -11,8 +11,8 @@ import FilterMenu from "./FilterMenu";
 export default function ProductList() {
 
     const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const [operation, setOperation] = useState({
-        isLoading:false,
         category: [],
         search:""
     });
@@ -41,25 +41,25 @@ export default function ProductList() {
 
 
     useEffect(() => {
-        dispatch(getProducts());
         fetchHandler();
-    }, []);
+        dispatch(getProducts());
+       
+    },[]);
 
     // const products = useSelector((state) => state.products);
     // console.log(products,"products");
 
     useEffect(() => {
         checkDistinct();
-
     }, [data]);
 
     const fetchHandler = (event) => {
-        setOperation({...operation,isLoading:true});
+        setIsLoading(true);
         axios
             .get("https://fakestoreapi.com/products")
             .then((resp) => {
                 setData(resp.data);
-                setOperation({...operation,isLoading:false});
+                setIsLoading(false);
 
             });
 
@@ -104,7 +104,7 @@ export default function ProductList() {
     let content = <p>Found no Data.</p>;
     let categoryNames = <p>Found no Data.</p>;
     let paginationCount = <p>Found no Data.</p>;
-    if (operation.isLoading) {
+    if (isLoading) {
         content =
             <div className="loading-placeHolder">
                 <div className="bd-example bd-example-placeholder-cards d-flex justify-content-around">
@@ -296,8 +296,6 @@ export default function ProductList() {
     };
     const onSelect = () => {
 
-        let text;
-        let dataSort = [];
         let getValue = document.getElementById("sort").value;
         switch (getValue) {
             case "sortByLatest":
