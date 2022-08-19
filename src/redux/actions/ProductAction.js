@@ -21,6 +21,5 @@ export const getProduct = (id) => async (dispatch) => {
         type: GET_PRODUCT,
         payload: response.data,
     });
-    id(response.data);
 };
 

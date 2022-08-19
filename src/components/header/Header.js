@@ -59,8 +59,8 @@ export default function Header() {
               </div>
             </div>
             <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--4 logo-center">
-              <a href="/" className=""><img className="logo "
-              onClick={()=>history.push("/venia/")}
+              <a  className=""><img className="logo "
+              //  onClick={()=>history.push("/")}
                src={process.env.PUBLIC_URL + `/assets/icons/logo2.png`} alt="logo" />
               </a>
             </div>

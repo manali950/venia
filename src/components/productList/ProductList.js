@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/actions/ProductAction";
 import { Link } from "react-router-dom";
 import FilterMenu from "./FilterMenu";
+import ProductListItems from './ProductListItems';
 
 export default function ProductList() {
 
@@ -47,14 +48,8 @@ export default function ProductList() {
         
     },[]);
  
-
-    useEffect(() => {
-        checkDistinct();
-    }, [data]);
-
-
-    var dataLimit = 12;
-    var pageLimit = 2;
+    let dataLimit = 12;
+    let pageLimit = 2;
     const [pages] = useState(Math.round(20 / dataLimit));
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -173,7 +168,7 @@ export default function ProductList() {
 
 
     }
-    if (data.length > 0) {
+    else if (data.length > 0) {
         if (isSort.latest) {
             data.sort((a, b) => parseFloat(a.id) - parseFloat(b.id)); // ascending (Default)
         }
@@ -192,20 +187,7 @@ export default function ProductList() {
             .filter((data) => (data.id >= startIndex) && (data.id <= endIndex))
             .map((item) => (
 
-                <div className="aem-GridColumn  aem-GridColumn--default--4 aem-GridColumn--phone--6 d-flex" key={item.id}>
-                    <div className='card'>
-                        <Link to={`/venia/products/ProductDetails/${item.id}`}>
-                            <div className='card-body'>
-                                <img src={item.image} alt="product-img" className='img-wrapper' />
-
-                                <p className='title'>{item.title.slice(0, 17 - 3) + '...'}</p>
-                                <p className='price'>${item.price}</p>
-                                <img className="icon" src={process.env.PUBLIC_URL + `/assets/icons/heart.svg`} alt="wishlist icon" />
-                            </div>
-                        </Link>
-
-                    </div>
-                </div>
+                <ProductListItems key={item.id} item={item} />
             ));
 
         if (state.products.length !== 0) {
@@ -229,23 +211,9 @@ export default function ProductList() {
                 .filter((data) =>
                     data.category.toLowerCase().includes(operation.search.toLowerCase()))
                 .slice(startIndex, endIndex)
-                .map((item) => (
+                .map((item) => (    
 
-                    <div className="aem-GridColumn  aem-GridColumn--default--4 aem-GridColumn--phone--6 d-flex" key={item.id}>
-                        <div className='card'>
-
-                            <Link to={`/venia/products/ProductDetails/${item.id}`}>
-                                <div className='card-body'>
-                                    <img src={item.image} alt="product-img" className='img-wrapper' />
-
-                                    <p className='title'>{item.title.slice(0, 17 - 3) + '...'}</p>
-                                    <p className='price'>${item.price}</p>
-                                    <img className="icon" src={process.env.PUBLIC_URL + `/assets/icons/heart.svg`} alt="wishlist icon" />
-                                </div>
-                            </Link>
-
-                        </div>
-                    </div>
+                    <ProductListItems key={item.id} item={item} />
                 ));
         }
 
@@ -261,7 +229,9 @@ export default function ProductList() {
   
 
     }
-
+    useEffect(() => {
+        checkDistinct();
+    }, [data]);
     const checkDistinct = () => {
         let distinctCategory = [];
         for (let i = 0; i < data.length; i++) {
